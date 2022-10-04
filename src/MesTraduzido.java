@@ -4,7 +4,6 @@
  */
 
 import java.util.Scanner;
-import java.util.InputMismatchException;
 
 public class MesTraduzido {
 
@@ -40,8 +39,7 @@ public class MesTraduzido {
                     System.out.print("~>");
                     escolha_sn = input.next().charAt(0);
 
-                }
-                if (index == 1) {
+                } else if (index == 1) {
                     System.out.println();
                     System.out.println("Choose the number of a month to translate");
                     System.out.print("~>");
@@ -51,6 +49,8 @@ public class MesTraduzido {
                     System.out.println("Do you wish to check another month? (S/N)");
                     System.out.print("~>");
                     escolha_sn = input.next().charAt(0);
+                } else {
+                    System.out.println("Escolha uma opção válida!");
                 }
 
             } while (escolha_sn == 's' || escolha_sn == 'S');
@@ -60,4 +60,5 @@ public class MesTraduzido {
         }
 
     }
+
 }
